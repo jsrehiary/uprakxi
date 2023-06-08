@@ -5,7 +5,6 @@ session_start();
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $username = $_POST['username'];
-    $email = $_POST['email'];
     $password = $_POST['password'];
     $cpassword = $_POST['cpassword'];
 
@@ -14,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $result = $conn->query($sql);
 
         if ($result->num_rows == 0) {
-            $sql = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$password')";
+            $sql = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
             $result = $conn->query($sql);
 
             if ($result) {
@@ -56,11 +55,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             <div class="mb-3">
                 <label for="inputUsername" class="form-label">Username</label>
                 <input type="text" class="form-control" id="inputUsername" name="username">
-            </div>
-            <div class="mb-3">
-                <label for="inputEmail" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" name="email">
-                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
             </div>
             <div class="mb-3">
                 <label for="inputPassword" class="form-label">Password</label>
