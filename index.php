@@ -25,7 +25,7 @@ $su = $_SESSION['username'];
 
 <body>
     <!-- Landing Message -->
-    <div class="container-fluid bg-dark text-light p-3">
+    <div class="container-fluid bg-light text-dark p-3">
         <div class="container text-center">
             <div class="row align-items-center">
                 <div class="col">
@@ -33,9 +33,6 @@ $su = $_SESSION['username'];
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis dolor rerum fugit dicta provident error
                         beatae quas ratione odio voluptatibus mollitia, amet tenetur. Nemo provident quam ullam vero sequi quis!
                     </p>
-                </div>
-                <div class="col-1">
-                    <a href="logout.php" class="btn btn-outline-danger">Logout</a>
                 </div>
             </div>
         </div>

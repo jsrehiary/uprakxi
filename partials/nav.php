@@ -14,7 +14,7 @@
                     <a class="nav-link" href="app.php">App</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About Me</a>
+                    <a class="nav-link text-danger" href="logout.php">Logout</a>
                 </li>
             </ul>
         </div>

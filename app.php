@@ -28,11 +28,13 @@ $result = $conn->query($sql);
 
     <!-- Heading -->
     <div class="container">
-        <h1 class="mb-3 text-primary">Database Makanan</h1>
+        <div class="p-3 bg-info bg-opacity-10 border border-info  mb-3 mt-3">
+            <h2>Data Makanan</h2>
+        </div>
     </div>
 
     <div class="container">
-        <table class="table">
+        <table class="table rounded shadow">
             <thead>
                 <tr>
                     <th scope="col">#</th>
@@ -42,7 +44,7 @@ $result = $conn->query($sql);
                     <th scope="col">Kategori</th>
                     <th scope="col">Deskripsi</th>
                     <th scope="col">Kode Makanan</th>
-                    <th class="text-center" scope="col" colspan="2">Edit</th>
+                    <th class="text-center" scope="col" colspan="2">Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -50,20 +52,20 @@ $result = $conn->query($sql);
 
                     ?>
                     <tr>
-                        <th scope="row"><?= $row['id'] ?></th>
-                        <td scope="row"><?= $row['nama_makanan'] ?></td>
-                        <td scope="row">Rp<?= $row['harga'] ?></td>
-                        <td scope="row"><?= $row['stok'] ?></td>
-                        <td scope="row"><?= $row['kategori'] ?></td>
-                        <td scope="row"><?= $row['deskripsi'] ?></td>
-                        <td scope="row"><?= $row['kode_makanan'] ?></td>
-                        <td class="text-center" scope="row"><a href="update.php?id=<?= $row['id'] ?>">Update</a></td>
-                        <td class="text-center" scope="row"><a href="delete.php?id=<?= $row['id'] ?>">Delete</a></td>
+                        <th><?= $row['id'] ?></th>
+                        <td><?= $row['nama_makanan'] ?></td>
+                        <td>Rp<?= $row['harga'] ?></td>
+                        <td><?= $row['stok'] ?></td>
+                        <td><?= $row['kategori'] ?></td>
+                        <td><?= $row['deskripsi'] ?></td>
+                        <td><?= $row['kode_makanan'] ?></td>
+                        <td class="text-center"><a class="btn btn-warning" href="update.php?id=<?= $row['id'] ?>">Edit</a></td>
+                        <td class="text-center"><a class="btn btn-danger" href="delete.php?id=<?= $row['id'] ?>">Delete</a></td>
                     </tr>
                 <?php } ?>
             </tbody>
         </table>
-        <a class="btn btn-outline-info" href="create.php">Tambah Makanan</a>
+        <a class="btn btn-outline-info mt-3" href="create.php">Tambah Makanan</a>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
