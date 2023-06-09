@@ -17,16 +17,17 @@ body {
 .login, .register, .create, .edit {
     width: 499px;
     height: fit-content;
-    background: #f2f2f2;
+    background: linear-gradient(135deg, #F6F1F1, #AFD3E2) ;
     padding: 45px;
-    border-radius: 14px;
-    box-shadow: 0 0 15px 2px #00C4FF;
+    border-radius: 7px;
+    box-shadow: 4px 4px 15px 2px rgba(0, 0, 0, 0.5);
 }
 
 .create, .edit {
     width: 699px;
 }
 
+/* TODO: Make footer style and add the element for each page */
 .footer {
 
 }
