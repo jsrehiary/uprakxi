@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Register</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
@@ -46,8 +46,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 <body>
     <!-- Register Form -->
-    <div class="container">
+    <div class="container mb-3 mt-3">
         <h1 class="text-center">Register</h1>
+    </div>
+
+    <div class="container p-5 ">
         <form method="POST">
             <?php if (isset($error)) { ?>
                 <p class="text-danger"> <?= $error ?> </p>
@@ -65,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 <input type="password" class="form-control" id="inputPassword1" name="cpassword">
             </div>
             <div class="mb-3">
-                <a href="register.php">Already have account?</a>
+                <a href="login.php">Already have account?</a>
             </div>
             <input type="submit" class="btn btn-primary" value="Register">
         </form>
