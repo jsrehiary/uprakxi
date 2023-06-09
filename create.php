@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $kategori = $_POST['kategori'];
     $deskripsi = $_POST['deskripsi'];
     $kode_makanan = $_POST['kode_makanan'];
-    $sql = "INSERT INTO ukk_makanan (nama_makanan, harga, stok, kategori, deskripsi, kode_makanan) VALUES  ('$nama_makanan','$harga','$stok','$kategori','$deskripsi','$kode_makanan')";
+    $sql = "INSERT INTO ukk_makanan (nama_makanan, harga, stok, kategori, deskripsi, kode_makanan) VALUES ('$nama_makanan','$harga','$stok','$kategori','$deskripsi','$kode_makanan')";
 
     $result = $conn->query($sql);
 
@@ -40,16 +40,15 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <!-- Navbar -->
     <?php include 'partials/nav.php' ?>
 
-    <div class="container">
-        <h1>Add Data - Daftar Makanan</h1>
-    </div>
+    <div class="custContainer">
 
-    <!-- Editing Form -->
-    <div class="container">
-        <form action="" method="POST">
-            <?php if (isset($error)) { ?>
-                <p class="text-danger p-1 border-bottom border-danger"><?= $error ?></p>
-            <?php } ?>
+        <!-- Create Form -->
+        <div class="create container">
+            <h1>Add Data - Daftar Makanan</h1>
+            <form action="" method="POST">
+                <?php if (isset($error)) { ?>
+                    <p class="text-danger p-1 border-bottom border-danger"><?= $error ?></p>
+                <?php } ?>
                 <div class="mb-3">
                     <label for="inputNamaMakanan" class="form-label">Nama Makanan</label>
                     <input type="text" class="form-control" id="inputNamaMakanan" name="nama_makanan">
@@ -74,8 +73,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                     <label for="inputKodeMakanan" class="form-label">Kode Makanan</label>
                     <input type="text" class="form-control" id="inputKodeMakanan" name="kode_makanan">
                 </div>
-            <input type="submit" class="btn btn-outline-danger" value="Create">
-        </form>
+                <a href="app.php" class="btn btn-outline-warning w-25">Back</a>
+                <input type="submit" class="btn btn-outline-primary w-50" value="Create">
+            </form>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"

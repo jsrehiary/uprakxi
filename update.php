@@ -58,47 +58,50 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <!-- Navbar -->
     <?php include 'partials/nav.php' ?>
 
-    <!-- Heading -->
-    <div class="container">
-        <h1>Mode Edit - Daftar Makanan</h1>
-    </div>
 
-    <!-- Update/Editing Form -->
-    <div class="container">
-        <form action="" method="POST">
-            <?php if (isset($error)) { ?>
-                <p class="text-danger p-1 border-bottom border-danger"><?= $error ?></p>
-            <?php } ?>
-            <?php foreach ($rows as $row) { ?>
-                <div class="mb-3">
-                    <label for="inputNamaMakanan" class="form-label">Nama Makanan</label>
-                    <input type="text" class="form-control" id="inputNamaMakanan" name="nama_makanan"
-                        value="<?= $row['nama_makanan'] ?>">
-                </div>
-                <div class="mb-3">
-                    <label for="inputHarga" class="form-label">Harga</label>
-                    <input type="text" class="form-control" id="inputHarga" name="harga" value="<?= $row['harga'] ?>">
-                </div>
-                <div class="mb-3">
-                    <label for="inputStok" class="form-label">Stok</label>
-                    <input type="text" class="form-control" id="inputStok" name="stok" value="<?= $row['stok'] ?>">
-                </div>
-                <div class="mb-3">
-                    <label for="inputKategori" class="form-label">Kategori</label>
-                    <input type="text" class="form-control" id="inputKategori" name="kategori" value="<?= $row['kategori'] ?>">
-                </div>
-                <div class="mb-3">
-                    <label for="inputDeskripsi" class="form-label">Deskripsi</label>
-                    <input type="text" class="form-control" id="inputDeskripsi" name="deskripsi" value="<?= $row['deskripsi'] ?>">
-                </div>
-                <div class="mb-3">
-                    <label for="inputKodeMakanan" class="form-label">Deskripsi</label>
-                    <input type="text" class="form-control" id="inputKodeMakanan" name="kode_makanan" value="<?= $row['kode_makanan'] ?>">
-                </div>
-            <?php } ?>
-            <input type="submit" class="btn btn-outline-danger" value="Update">
-        </form>
+    <div class="custContainer">
+        <div class="edit container">
+            <h1>Mode Edit - Daftar Makanan</h1>
+            <form action="" method="POST">
+                <?php if (isset($error)) { ?>
+                    <p class="text-danger p-1 border-bottom border-danger"><?= $error ?></p>
+                <?php } ?>
+                <?php foreach ($rows as $row) { ?>
+                    <div class="mb-3">
+                        <label for="inputNamaMakanan" class="form-label">Nama Makanan</label>
+                        <input type="text" class="form-control" id="inputNamaMakanan" name="nama_makanan"
+                            value="<?= $row['nama_makanan'] ?>">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputHarga" class="form-label">Harga</label>
+                        <input type="text" class="form-control" id="inputHarga" name="harga" value="<?= $row['harga'] ?>">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputStok" class="form-label">Stok</label>
+                        <input type="text" class="form-control" id="inputStok" name="stok" value="<?= $row['stok'] ?>">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputKategori" class="form-label">Kategori</label>
+                        <input type="text" class="form-control" id="inputKategori" name="kategori"
+                            value="<?= $row['kategori'] ?>">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputDeskripsi" class="form-label">Deskripsi</label>
+                        <input type="text" class="form-control" id="inputDeskripsi" name="deskripsi"
+                            value="<?= $row['deskripsi'] ?>">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputKodeMakanan" class="form-label">Deskripsi</label>
+                        <input type="text" class="form-control" id="inputKodeMakanan" name="kode_makanan"
+                            value="<?= $row['kode_makanan'] ?>">
+                    </div>
+                <?php } ?>
+                <a href="app.php" class="btn btn-outline-warning">Back</a>
+                <input type="submit" class="btn btn-outline-primary" value="Update">
+            </form>
+        </div>
     </div>
+    <!-- Update/Editing Form -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>

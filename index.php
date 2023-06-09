@@ -47,7 +47,7 @@ $su = $_SESSION['username'];
             <img src="assets/img1.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Database Makanan</h5>
-                <p class="card-text">Manajemen Data Makanan.</p>
+                <p class="card-text">Manajemen Menu Makanan.</p>
                 <a href="app.php" class="btn btn-outline-primary">Open</a>
             </div>
         </div>

@@ -1,6 +1,34 @@
+* {
+    font-family: 'Poppins';
+    transition: all ease 0.2s o !important;
+}
+
 body {
-    height: 1000px;
-    background: #dde6ed;
+    height: 2000px;
+    background: linear-gradient(135deg, #30A2FF, #00C4FF, #FFE7A0, #FFF5B8) ;
+}
+
+.custContainer {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.login, .register, .create, .edit {
+    width: 499px;
+    height: fit-content;
+    background: #f2f2f2;
+    padding: 45px;
+    border-radius: 14px;
+    box-shadow: 0 0 15px 2px #00C4FF;
+}
+
+.create, .edit {
+    width: 699px;
+}
+
+.footer {
+
 }
 
 .brandName { 

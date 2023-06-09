@@ -51,33 +51,32 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 <body>
     <!-- Register Form -->
-    <div class="container mb-3 mt-3">
-        <h1 class="text-center">Register</h1>
-    </div>
-
-    <div class="container p-5 ">
-        <form method="POST">
-            <?php if (isset($error)) { ?>
-                <p class="text-danger"> <?= $error ?> </p>
-            <?php } ?>
-            <div class="mb-3">
-                <label for="inputUsername" class="form-label">Username</label>
-                <input type="text" class="form-control" id="inputUsername" name="username">
-            </div>
-            <div class="mb-3">
-                <label for="inputPassword" class="form-label">Password</label>
-                <input type="password" class="form-control" id="inputPassword" name="password">
-            </div>
-            <div class="mb-3">
-                <label for="inputPassword1" class="form-label">Confirm Password</label>
-                <input type="password" class="form-control" id="inputPassword1" name="cpassword">
-            </div>
-            <div class="mb-3">
-                <a href="login.php">Already have account?</a>
-            </div>
-            <input type="submit" class="btn btn-primary" value="Register">
-        </form>
-    </div>
+        <div class="custContainer">
+            <div class="container register">
+            <h1 class="text-center">Register</h1>
+            <form method="POST">
+                <?php if (isset($error)) { ?>
+                    <p class="text-danger"> <?= $error ?> </p>
+                <?php } ?>
+                <div class="mb-3">
+                    <label for="inputUsername" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="inputUsername" name="username">
+                </div>
+                <div class="mb-3">
+                    <label for="inputPassword" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="inputPassword" name="password">
+                </div>
+                <div class="mb-3">
+                    <label for="inputPassword1" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="inputPassword1" name="cpassword">
+                </div>
+                <div class="mb-3">
+                    <a href="login.php">Already have account?</a>
+                </div>
+                <input type="submit" class="btn btn-outline-success w-100" value="Register">
+            </form>
+        </div>
+        </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
