@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 header("Location: login.php");
                 exit();
             } else {
-                $error = "Error: " . $conn->error;
+                $error = "Error: IDK";
             }
         } else {
             $error = "User already exists.";
@@ -63,6 +63,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             <div class="mb-3">
                 <label for="inputPassword1" class="form-label">Confirm Password</label>
                 <input type="password" class="form-control" id="inputPassword1" name="cpassword">
+            </div>
+            <div class="mb-3">
+                <a href="register.php">Already have account?</a>
             </div>
             <input type="submit" class="btn btn-primary" value="Register">
         </form>

@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         header("Location: app.php");
         exit();
     } else {
-        $error = "Error: " . $conn->error;
+        $error = "Error: IDK";
     }
 }
 ?>
