@@ -3,24 +3,29 @@ include 'config.php';
 
 session_start();
 
+// Jika Form disubmit...
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    // ...Mendefinisikan variabel data user yang diinput
     $username = $_POST['username'];
     $password = $_POST['password'];
     $cpassword = $_POST['cpassword'];
 
+    // Validasi Password dan Confirm Password
     if ($password == $cpassword) {
-        $sql = "SELECT * FROM users WHERE username='$username' AND password='$password'";
+        $sql = "SELECT * FROM users WHERE username='$username'";
         $result = $conn->query($sql);
 
+        // Validasi username yang sama
         if ($result->num_rows == 0) {
             $sql = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
             $result = $conn->query($sql);
 
+            // Jika query insert data berhasil
             if ($result) {
                 header("Location: login.php");
                 exit();
             } else {
-                $error = "Error: IDK";
+                $error = "Error: Query Failure";
             }
         } else {
             $error = "User already exists.";

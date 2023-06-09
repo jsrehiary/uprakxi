@@ -3,12 +3,12 @@ include 'config.php';
 
 session_start();
 
-// $id = $_GET['id'];
-
+// Mengambil ID dari url
 if (isset($_GET['id'])) {
     $cid = $_GET['id'];
-    $sql = "SELECT * FROM ukk_makanan WHERE id='$cid'";
 
+    // Validasi URL yang diambil dengan query SQL
+    $sql = "SELECT * FROM ukk_makanan WHERE id='$cid'";
     $result = $conn->query($sql);
 
     if ($result) {
@@ -19,7 +19,9 @@ if (isset($_GET['id'])) {
     die("<script>alert('ID not specified')</script>");
 }
 
+// Jika form disubmit...
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    // ...Mendefinisikan variabel dari inputan user
     $nama_makanan = $_POST['nama_makanan'];
     $harga = $_POST['harga'];
     $stok = $_POST['stok'];
@@ -34,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         header("Location: app.php");
         exit();
     } else {
-        $error = "Error: IDK";
+        $error = "Error: Query Failure";
     }
 }
 ?>
@@ -56,11 +58,12 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <!-- Navbar -->
     <?php include 'partials/nav.php' ?>
 
+    <!-- Heading -->
     <div class="container">
         <h1>Mode Edit - Daftar Makanan</h1>
     </div>
 
-    <!-- Editing Form -->
+    <!-- Update/Editing Form -->
     <div class="container">
         <form action="" method="POST">
             <?php if (isset($error)) { ?>
