@@ -7,6 +7,7 @@ $sql = "SELECT * FROM ukk_makanan";
 
 $result = $conn->query($sql);
 
+$no = 1;
 ?>
 
 <!DOCTYPE html>
@@ -52,7 +53,7 @@ $result = $conn->query($sql);
 
                     ?>
                     <tr>
-                        <th><?= $row['id'] ?></th>
+                        <th><?= $no++ ?></th>
                         <td><?= $row['nama_makanan'] ?></td>
                         <td>Rp<?= $row['harga'] ?></td>
                         <td><?= $row['stok'] ?></td>
@@ -60,12 +61,14 @@ $result = $conn->query($sql);
                         <td><?= $row['deskripsi'] ?></td>
                         <td><?= $row['kode_makanan'] ?></td>
                         <td class="text-center"><a class="btn btn-warning" href="update.php?id=<?= $row['id'] ?>">Edit</a></td>
-                        <td class="text-center"><a class="btn btn-danger" href="delete.php?id=<?= $row['id'] ?>">Delete</a></td>
+                        <form action="" method="POST" name="del">
+                            <td class="text-center"><a class="btn btn-danger" href="delete.php?id=<?= $row['id'] ?>">Delete</a></td>
+                        </form>
                     </tr>
                 <?php } ?>
             </tbody>
         </table>
-        <a class="btn btn-info mt-3" href="create.php">Tambah Makanan</a>
+        <a class="btn btn-light mt-3" href="create.php">Tambah Makanan</a>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"

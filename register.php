@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
         // Validasi username yang sama
         if ($result->num_rows == 0) {
-            $sql = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
+            $sql = "INSERT INTO users (username, password) VALUES ('$username', md5('$password'))";
             $result = $conn->query($sql);
 
             // Jika query insert data berhasil
@@ -25,13 +25,13 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 header("Location: login.php");
                 exit();
             } else {
-                $error = "Error: Query Failure";
+                $err = "Error: Query Failure";
             }
         } else {
-            $error = "User already exists.";
+            $err = "User already exists.";
         }
     } else {
-        $error = "Password not same.";
+        $err = "Password not same.";
     }
 }
 ?>
@@ -53,10 +53,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <!-- Register Form -->
         <div class="custContainer">
             <div class="container register">
-            <h1 class="text-center">Register</h1>
+            <h1>Register</h1>
             <form method="POST">
-                <?php if (isset($error)) { ?>
-                    <p class="text-danger"> <?= $error ?> </p>
+                <?php if (isset($err)) { ?>
+                    <p class="text-danger"> <?= $err ?> </p>
                 <?php } ?>
                 <div class="mb-3">
                     <label for="inputUsername" class="form-label">Username</label>
@@ -73,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 <div class="mb-3">
                     <a href="login.php">Already have account?</a>
                 </div>
-                <input type="submit" class="btn btn-outline-success w-100" value="Register">
+                <input type="submit" class="btn btn-success w-100" value="Register">
             </form>
         </div>
         </div>

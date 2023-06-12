@@ -5,7 +5,7 @@
 
 body {
     height: 2000px;
-    background: linear-gradient(135deg, #30A2FF, #00C4FF, #FFE7A0, #FFF5B8) ;
+    background: linear-gradient(135deg, #F7F1E5, #E7B10A, #898121, #4C4B16);
 }
 
 .custContainer {
@@ -14,24 +14,27 @@ body {
     align-items: center;
 }
 
-.login, .register, .create, .edit {
+.login,
+.register,
+.create,
+.edit {
+    /* color: #fff; */
     width: 499px;
     height: fit-content;
-    background: linear-gradient(135deg, #F6F1F1, #AFD3E2) ;
+    background: rgba(0, 0, 0, 0.15);
     padding: 45px;
     border-radius: 7px;
     box-shadow: 4px 4px 15px 2px rgba(0, 0, 0, 0.5);
 }
 
-.create, .edit {
+.create,
+.edit {
     width: 699px;
 }
 
 /* TODO: Make footer style and add the element for each page */
-.footer {
 
-}
 
-.brandName { 
-    color: #00C4FF;
+.brandName {
+    color: #898121;
 }

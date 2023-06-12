@@ -10,6 +10,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $kategori = $_POST['kategori'];
     $deskripsi = $_POST['deskripsi'];
     $kode_makanan = $_POST['kode_makanan'];
+
+    // File handler
+    $fName =;
+
     $sql = "INSERT INTO ukk_makanan (nama_makanan, harga, stok, kategori, deskripsi, kode_makanan) VALUES ('$nama_makanan','$harga','$stok','$kategori','$deskripsi','$kode_makanan')";
 
     $result = $conn->query($sql);
@@ -45,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <!-- Create Form -->
         <div class="create container">
             <h1>Add Data - Daftar Makanan</h1>
-            <form action="" method="POST">
+            <form action="" method="POST" enctype="multipart/form-data">
                 <?php if (isset($error)) { ?>
                     <p class="text-danger p-1 border-bottom border-danger"><?= $error ?></p>
                 <?php } ?>
