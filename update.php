@@ -96,8 +96,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                             value="<?= $row['kode_makanan'] ?>">
                     </div>
                 <?php } ?>
-                <a href="app.php" class="btn btn-outline-warning">Back</a>
-                <input type="submit" class="btn btn-outline-primary" value="Update">
+                <a href="app.php" class="btn btn-warning">Back</a>
+                <input type="submit" class="btn btn-primary" value="Update">
             </form>
         </div>
     </div>

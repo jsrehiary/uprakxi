@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 08, 2023 at 05:44 PM
+-- Generation Time: Jun 13, 2023 at 05:00 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -42,8 +42,11 @@ CREATE TABLE `ukk_makanan` (
 --
 
 INSERT INTO `ukk_makanan` (`id`, `nama_makanan`, `harga`, `stok`, `kategori`, `deskripsi`, `kode_makanan`) VALUES
-(1, 'Croissante', 10000, 6, 'Fast Food', 'Cara bacanya: QUASO', '12345'),
-(2, 'Nasi Goreng', 15000, 30, 'Fried Food', 'Nasi Goreng Ala Jawa', '53214');
+(1, 'Croissante', 10000, 6, 'Fast Food', 'We spell it: QUASO', '12345'),
+(4, 'Nasi Uduk', 5000, 40, 'traditional food', 'Nasi Uduk made by hands', '17701'),
+(8, 'Bubur Kacang Ijo', 12000, 7, 'Bubur', 'Disajikan hangat', '21212'),
+(9, 'apa', 1000, 12, 'gatau', 'gatau', '11212'),
+(10, 'apa1', 2000, 78, 'gatau1', 'gatau1', '17765');
 
 -- --------------------------------------------------------
 
@@ -64,11 +67,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `created_at`, `updated_at`) VALUES
-(1, 'Eva', '123cloverblack', '2023-05-29 11:36:48', '2023-05-29 18:36:48'),
-(2, 'Stormhaste', 'storm123', '2023-06-07 09:23:25', '2023-06-07 16:23:25'),
-(4, 'Crudmaster', 'hello123', '2023-06-07 10:24:29', '2023-06-07 17:24:29'),
-(6, 'Webmaster', 'ds56-C3Q#DKX4eM', '2023-06-07 16:17:36', '2023-06-07 23:17:36'),
-(7, 'RyanSZ', 'ryansz123', '2023-06-08 12:56:25', '2023-06-08 19:56:25');
+(10, 'Aira', '9019765c5b67f42a3ccfc3dd76c5b92f', '2023-06-11 16:44:23', '2023-06-11 23:44:23'),
+(11, 'Eva', '75824d3ceaac39aac3f59ef3efb92774', '2023-06-12 01:04:32', '2023-06-12 08:04:32');
 
 --
 -- Indexes for dumped tables
@@ -95,13 +95,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `ukk_makanan`
 --
 ALTER TABLE `ukk_makanan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

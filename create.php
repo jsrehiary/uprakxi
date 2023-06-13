@@ -11,15 +11,13 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $deskripsi = $_POST['deskripsi'];
     $kode_makanan = $_POST['kode_makanan'];
 
-    // File handler
-    $fName =;
-
     $sql = "INSERT INTO ukk_makanan (nama_makanan, harga, stok, kategori, deskripsi, kode_makanan) VALUES ('$nama_makanan','$harga','$stok','$kategori','$deskripsi','$kode_makanan')";
 
     $result = $conn->query($sql);
 
     if ($result) {
-        header("Location: app.php");
+        echo '<script>alert("Makanan ditambahkan"); window.location.href = "app.php";</script>';
+        // header("Location: app.php");
         exit();
     } else {
         $error = "Error: IDK";
@@ -77,8 +75,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                     <label for="inputKodeMakanan" class="form-label">Kode Makanan</label>
                     <input type="text" class="form-control" id="inputKodeMakanan" name="kode_makanan">
                 </div>
-                <a href="app.php" class="btn btn-outline-warning w-25">Back</a>
-                <input type="submit" class="btn btn-outline-primary w-50" value="Create">
+                <a href="app.php" class="btn btn-warning w-25">Back</a>
+                <input type="submit" class="btn btn-primary w-50" value="Create">
             </form>
         </div>
     </div>

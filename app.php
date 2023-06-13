@@ -74,5 +74,9 @@ $no = 1;
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
 </body>
+<script>
+    var element = document.getElementById("app");
+    element.classList.add('active')
+</script>
 
 </html>

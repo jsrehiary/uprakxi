@@ -21,7 +21,7 @@ body {
     /* color: #fff; */
     width: 499px;
     height: fit-content;
-    background: rgba(0, 0, 0, 0.15);
+    background: #f2f2f2;
     padding: 45px;
     border-radius: 7px;
     box-shadow: 4px 4px 15px 2px rgba(0, 0, 0, 0.5);

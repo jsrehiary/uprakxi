@@ -9,10 +9,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php">Home</a>
+                    <a class="nav-link" id="home" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="app.php">App</a>
+                    <a class="nav-link" id="app" href="app.php">App</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-danger" href="logout.php">Logout</a>
